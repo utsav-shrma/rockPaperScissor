@@ -203,6 +203,7 @@ function playGame(userPick){
 function resultPlayAgain(){
     gameplay.style.display="";
     result.style.display="none";
+    nextButton.style.display="none";
   
     
 
@@ -220,6 +221,7 @@ nextButton.addEventListener("click",gotToWinnerScreen);
 function gotToWinnerScreen(){
     wholeUpperContainer.style.display="none";
     winnerScreen.style.display="";
+    nextButton.style.display="none";
 }
 function gotToHomeScreen(){
     wholeUpperContainer.style.display="";

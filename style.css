@@ -105,7 +105,7 @@ body{
     
     
     height: 40vh;
-    width:25vw;
+    width:30vw;
     
     
     
@@ -519,14 +519,14 @@ body{
 
 .line-two{
     transform: rotate(55deg);
-    top:55vh;
+    top:63vh;
     left:36vw;
 }
 
 .line-three{
     transform: rotate(-55deg);
-    top:59vh;
-    left:45vw;
+    top:58vh;
+    left:43vw;
 }
 
 /* #gameplay{display: none;} */
