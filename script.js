@@ -119,6 +119,35 @@ function updateScore(){
 updateScore();
 
 
+function updatePickImg(userPick,pcPick){
+    let imageClassMap={
+        0:{
+            image:"./assets/icons8-fist-67 1.png",
+            div:"fist-select"
+
+        },
+        1:{
+            image:"./assets/icons8-hand-64 1.png",
+            div:"hand-select"
+
+        },
+        2:{
+            image:"./assets/17911 1.png",
+            div:"scissor-select"
+
+        }
+
+    }
+    let userPickImage=document.getElementById("user-pick-img");
+    let userPickDiv=document.getElementById("user-pick-sign");
+    let pcPickImage=document.getElementById("pc-pick-img");
+    let pcPickDiv=document.getElementById("pc-pick-sign");
+    userPickImage.src=imageClassMap[userPick].image;
+    pcPickImage.src=imageClassMap[pcPick].image;
+    userPickDiv.className=imageClassMap[userPick].div;
+    pcPickDiv.className=imageClassMap[pcPick].div;
+}
+
 function userWins(){
     let userScore = parseInt(localStorage.getItem(userScoreKey));
     console.log("userwins",userScore);
@@ -182,6 +211,7 @@ function playGame(userPick){
     setTimeout(function() {
         gameplay.style.display="none";
         result.style.display="";
+        updatePickImg(userPick,pcPick);
     }, 200); 
 
 
