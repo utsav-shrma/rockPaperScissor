@@ -1,0 +1,548 @@
+
+body{
+    background-color: #8CC461;
+    margin: 0%;
+    padding: 0%;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    
+
+}
+
+#sub-container-upper{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 30vh;
+    align-items: center;
+    /* display: none; */
+    
+}
+
+#score-and-title{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    height: 20vh;
+    width: 70vw;
+    
+}
+
+#title-list{
+    margin-left: 2vw;
+}
+#score-human{
+    margin-right: 2vw;
+}
+#title-list h1{
+    color: white;
+    font-family: Roboto;
+}
+
+#score{
+    display: flex;
+    
+
+}
+
+.score-card{
+    background-color: white;
+    border-radius: 5px;
+    height: 15vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    font-family: Roboto;
+    text-align: center;
+    
+}
+
+.score-card p{
+    padding: 0%;
+    margin: 0%;
+ }
+.score-value{
+    font-weight: bold;
+    font-size: 5vh;
+    padding: 0%;
+    margin: 0%;
+}
+#sub-container-middle{
+    
+    height: 60vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+
+}
+#gameplay{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+    
+}
+#button-container{
+    /* background-color: black; */
+    
+    
+    height: 40vh;
+    width:25vw;
+    
+    
+    
+    
+}
+
+
+
+/* #sub-container-upper{
+    visibility: hidden;
+    display: none;
+
+} */
+
+.whole-button {
+    
+    height:15vh;
+    width:15vh;
+    border-radius: 50%;
+    background-color: white;
+    border-width: 1.5vh;
+    border-style: solid;
+    position: relative;
+    align-items: center;
+    
+    
+    
+   
+}
+/* #scissor-sign:hover {
+    
+    box-shadow: 0px 0px 10px 5px #BD00FF;
+    
+  } */
+  button:hover{
+    filter: brightness(90%);
+  }
+
+  /* #hand-sign:hover {
+    
+    box-shadow: 0px 0px 10px 5px #0074B6;
+    
+  }
+  #fist-sign:hover {
+    
+    box-shadow: 0px 0px 10px 5px #FFA944;
+    
+  } */
+.whole-button:active {
+    
+    box-shadow: 0 6px green;
+    transform: translateY(5px);
+  }
+#fist-sign img{
+    
+    
+    position: relative;
+    right: 3px;
+    
+}
+#hand-sign{
+   
+    
+    top: 25vh;
+    
+   
+    
+    
+}
+
+.scissor-ring{
+    border-color: #BD00FF ;
+}
+.hand-ring{
+    border-color: #0074B6 ;
+    
+}
+.fist-ring{
+    border-color: #FFA943 ;
+    
+}
+
+
+
+#winner-screen{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#trophy{
+    
+}
+
+#winnercup{
+    
+    z-index: -1;
+    position: absolute;
+    left:43vw;
+    top:20vh;
+    
+    
+    
+}
+#stars{
+    position: relative;
+    z-index: 3;
+    
+    
+    
+}
+
+#winner-screen{
+    /* display: none; */
+}
+#winner-screen p{
+    color: white;
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#winner-screen h1{
+    font-weight: 600;
+    font-size: 100px;
+}
+#winner-screen p{
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.play-again-button{
+    font-weight: 500;
+    font-size: 20px;
+    color: #6B6B6B;
+    background-color: white;
+    width:174px;
+    height:44px;
+    border: none;
+    border-radius: 10px;
+}
+.play-again-button:active{
+    box-shadow: 0 5px green;
+    transform: translateY(4px);
+}
+
+#sub-container-lower{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#footer{
+    
+    width:18vw;
+    display:flex;
+    margin-right: 1vw;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#footer button{
+    color: white;
+    font-family: Roboto;
+    background-color: #8CC461;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
+    width: 120px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+
+
+}
+
+#footer button:active{
+    box-shadow: 0 5px green;
+    transform: translateY(4px);
+
+}
+#next-button{
+    /* display: none; */
+}
+#result{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    /* display: none; */
+}
+.result-pick{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: space-evenly;
+    align-items:center;
+}
+#result-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-pick p{
+
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    font-family: Roboto;
+}
+
+
+#result-message p{
+    font-weight: 600;
+    
+    color: white;
+    font-family: Roboto;
+    
+    margin: 0%;
+}
+#message-title{
+    font-size: 40px;
+}
+#opponent{
+    font-size: 20px;
+
+}
+#result-message button{
+    margin: 2vh;
+}
+.result-pick div img{
+    height: 15vh;
+    /* background-color: red; */
+    
+}
+.scissor-select{
+    background-color: white;
+    height:20vh;
+    width:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    border-width: 16px;
+    border-style: solid;
+    position: relative;
+    border-color: #BD00FF ;
+    
+    
+}
+.fist-select{
+    background-color: white;
+    height:20vh;
+    width:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    border-width: 16px;
+    border-style: solid;
+    position: relative;
+    border-color: #FFA943 ;
+}
+.hand-select{
+    background-color: white;
+    height:20vh;
+    width:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+    border-width: 16px;
+    border-style: solid;
+    position: relative;
+    border-color: #0074B6 ;
+}
+.circle-animation {
+    border-radius: 50%;
+    background-color: green;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    animation: scaleIn 1.5s infinite cubic-bezier(.36, .11, .89, .32);
+    /* display: none; */
+  }
+
+  /* .pc-pick-animation{
+    display:none;
+
+  } */
+
+  .one{
+    animation-delay: 0.5s;
+
+  }
+  .two{
+    animation-delay: 1s;
+
+  }
+  .three{
+    animation-delay: 1.5s;
+
+  }
+  
+  .four{
+    animation-delay: 2s;
+
+  }
+  
+ 
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(.5, .5);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+
+  #rules{
+
+  }
+  #title-list-rule{
+    width: 20vw;
+    height: 40vh;
+    position: absolute;
+    bottom: 15vh;
+    right:2vw;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:  #004429;
+    color: white;
+    font-family: Roboto;
+    border-radius: 10px;
+    border-color: white;
+    border-style:solid;
+    border-width:5px
+    
+
+  }
+  #title-list-rule p{
+    margin: 0%;
+    font-size: 25px;
+  }
+
+  #title-list-rule ul{
+    margin: 10px;
+    list-style-type: square;
+    
+  }
+
+  #title-list-rule ul li{
+    color: yellow;
+}
+  #title-list-rule ul li span{
+    color: white;
+}
+#cross-button{
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+    color: white;
+    padding: 0%;
+    margin: 0%;
+    font-size: 40px;
+    position: absolute;
+    top:40vh;
+    right: 5px;
+    /* font-family: Dangrek; */
+    
+}
+
+/* #rules{display: none;} */
+
+.line{
+    width:15vw;
+    height: 1vw;
+    background-color: black;
+    position: absolute;
+    top:47vh;
+    left:40vw;
+    z-index: -1;
+    opacity: 0.3;
+    
+    
+    
+
+
+}
+
+.line-two{
+    transform: rotate(55deg);
+    top:55vh;
+    left:36vw;
+}
+
+.line-three{
+    transform: rotate(-55deg);
+    top:59vh;
+    left:45vw;
+}
+
+/* #gameplay{display: none;} */
+/* #result{display:none;} */
+/* #rules{display: none;} */
+/* #next-button{display: none;} */
+/* .circle-animation{
+    display: none;
+} */
+/* #winner-screen{
+    
+     display: none; 
+} */
+/* #score-and-title{display:none;} */
+/* #sub-upper-middle-container{display: none;}  */
+#cross-button:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

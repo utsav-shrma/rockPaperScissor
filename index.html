@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <div id="container">
+        <div id="sub-upper-middle-container">
+            <div id="sub-container-upper">
+                <div id="score-and-title">
+                    <div id="title-list">
+                        <h1>ROCK <br>PAPER <br>SCISSORS</h1>
+                    </div>
+                    <div id="score">
+                        <div id="score-pc" class="score-card">
+                            <p>COMPUTER<br>SCORE</p>
+                            <p id="pc-score-value" class="score-value">0</p>
+                        </div>
+                        <div id="score-human" class="score-card">
+                            <p>YOUR<br>SCORE</p>
+                            <p id="user-score-value" class="score-value">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sub-container-middle">
+                <div id="gameplay">
+                    <div id="button-container">
+                        <button id="scissor-sign" class="whole-button scissor-ring">
+                            <image class="sign" src="./assets/17911 1.png"></image>
+                            
+                            
+        
+                        </button>
+                        <button id="hand-sign" class="whole-button hand-ring">
+                            <image class="sign" src="./assets/icons8-hand-64 1.png"></image>
+                            
+                        </button>
+                        <button id="fist-sign" class="whole-button fist-ring">
+                            <image class="sign" src="./assets/icons8-fist-67 1.png"></image>
+                            
+                            
+        
+                        </button>
+                        <div class="line line-one"></div>
+                        <div class="line line-two"></div>
+                        <div class="line line-three"></div>
+                        
+        
+                        
+        
+                    </div>
+                </div>
+                <div id="result">
+                    <div id="user-pick" class="result-pick">
+                        <p> YOU PICKED</p>
+                        <div id="user-pick-sign"  class="scissor-select">
+                            <image  src="./assets/17911 1.png"></image>
+                            
+                            <div class="circle-animation user-pick-animation"></div>
+                            <div class="circle-animation one user-pick-animation"></div>
+                            <div class="circle-animation two user-pick-animation"></div>
+                            <div class="circle-animation three user-pick-animation"></div>
+                            <div class="circle-animation four user-pick-animation"></div>
+                            
+        
+                        </div>
+
+
+                    </div>
+                    
+                    <div id="result-message" >
+                        <p id="message-title">YOU WON</p>
+                        <p id="opponent">AGAINST PC</p>
+                        <button id="result-play-again-button" class="play-again-button"> PLAY AGAIN</button>
+
+                    </div>
+
+                    <div id="pc-pick" class="result-pick">
+                        <p> PC PICK</p>
+                        <div  id="pc-pick-sign" class="hand-select">
+                            <image  src="./assets/icons8-fist-67 1.png"></image>
+                            
+                            <div class="circle-animation pc-pick-animation"></div>
+                            <div class="circle-animation one pc-pick-animation"></div>
+                            <div class="circle-animation two pc-pick-animation"></div>
+                            <div class="circle-animation three pc-pick-animation"></div>
+                            <div class="circle-animation four pc-pick-animation"></div>
+                            
+                            
+        
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+
+                
+            
+                
+            </div>
+        </div>
+        <div id="rules">
+            <div id="title-list-rule">
+                <p> Game Rules</p>
+                <ul>
+                    <li><span> Rock beats scissors, scissors beat paper, and paper beats rock.</span>
+                       
+                    </li>
+                    <li><span>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</span>
+                        
+                    </li>
+                    <li><span>rock, paper, scissors to settle minor decisions or simply play to pass the time</span> </li>
+                    <li><span>rock, paper, scissors to settle minor decisions or simply play to pass the time</span> </li>
+                </ul>
+            </div>
+            <button id="cross-button">X</button>
+
+        </div>
+        <div id="winner-screen">
+            <div id="trophy">
+                <img id="winnercup" src="./assets/Vector (2).png"></img>
+                <img id="stars" src="./assets/Group 5.png"></img>
+            </div>
+            <p>HURRAY !!</p>
+            <p>YOU WON THE GAME</p>
+            <button id="winner-screen-play-button" class="play-again-button"> PLAY AGAIN</button>
+
+        </div>
+        <div id="sub-container-lower">
+            <div id="footer">
+                <button id="next-button">NEXT</button>
+                <button id="show-rules-button">RULES</button>
+                
+            </div>
+
+        </div>
+    </div>
+    
+
+  
+</body>
+<script src="./script.js"></script>
+</html>
