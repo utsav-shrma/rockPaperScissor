@@ -28,7 +28,6 @@ circleAnimation.forEach(function(element) {
 });
 rule.style.display="none";
 
-
 result.style.display="none";
 
 function showRules(){
@@ -42,7 +41,6 @@ function decideRandomSign(){
     let max=3;
     let min=0;
     let random=parseInt(Math.floor(Math.random() * (max - min) + min));
-    console.log("random->",random);
     return random;
 
 }
@@ -52,6 +50,7 @@ function decideWinner(userPick,pcPick){
     //1->paper
     //2->scissor
 
+    //inner switch case
     //0->false
     //1->true
     //2->tie
@@ -92,7 +91,6 @@ function decideWinner(userPick,pcPick){
 }
 
 function updateScore(){
-    console.log("update score");
     let userScore=0;
     let pcScore=0;
 
@@ -110,7 +108,6 @@ function updateScore(){
         userScore = parseInt(localStorage.getItem(userScoreKey));
         pcScore = parseInt(localStorage.getItem(pcScoreKey));
         }
-        console.log("update score",userScore,pcScore);
     userScoreBoard.innerHTML=userScore;
     pcScoreBoard.innerHTML=pcScore;
 
@@ -124,17 +121,14 @@ function updatePickImg(userPick,pcPick){
         0:{
             image:"./assets/icons8-fist-67 1.png",
             div:"fist-select"
-
         },
         1:{
             image:"./assets/icons8-hand-64 1.png",
             div:"hand-select"
-
         },
         2:{
             image:"./assets/17911 1.png",
             div:"scissor-select"
-
         }
 
     }
@@ -150,10 +144,8 @@ function updatePickImg(userPick,pcPick){
 
 function userWins(){
     let userScore = parseInt(localStorage.getItem(userScoreKey));
-    console.log("userwins",userScore);
     
     localStorage.setItem(userScoreKey, userScore+1);
-    console.log("userwins",userScore);
     updateScore();
 
     usercircleAnimation.forEach(function(element) {
@@ -169,11 +161,8 @@ function userWins(){
     
 }
 function pcWins(){
-    let pcScore = parseInt(localStorage.getItem(pcScoreKey));
-    console.log("pcwins",pcScore);
-    
+    let pcScore = parseInt(localStorage.getItem(pcScoreKey));  
     localStorage.setItem(pcScoreKey, pcScore+1);
-    console.log("pcwins",pcScore);
     updateScore();
 
     pccircleAnimation.forEach(function(element) {
@@ -188,7 +177,6 @@ function pcWins(){
       nextButton.style.display="none";
 }
 function tie(){
-    console.log("tie");
     pccircleAnimation.forEach(function(element) {
         element.style.display = "none";
       });
@@ -200,20 +188,13 @@ function tie(){
       nextButton.style.display="none";
 }
 function playGame(userPick){
-    console.log("button clicked");
     pcPick=decideRandomSign();
-    console.log("user pick",userPick);
-    let gameResult=decideWinner(userPick,pcPick);
-    console.log("game result",gameResult);
-    
-    
-    
+    let gameResult=decideWinner(userPick,pcPick);  
     setTimeout(function() {
         gameplay.style.display="none";
         result.style.display="";
         updatePickImg(userPick,pcPick);
     }, 200); 
-
 
     switch(gameResult){
         case 0:
@@ -226,33 +207,20 @@ function playGame(userPick){
             tie();
             break;
     }
-
-
 }
 
 function resultPlayAgain(){
     gameplay.style.display="";
     result.style.display="none";
     nextButton.style.display="none";
-  
-    
-
 }
-showRuleButton.addEventListener("click",showRules);
-crossButton.addEventListener("click",hideRules);
-resultPlayAgainButton.addEventListener("click",resultPlayAgain);
-
-scissorButton.addEventListener("click",function(){playGame(2);});
-fistButton.addEventListener("click",function(){playGame(0);});
-handButton.addEventListener("click",function(){playGame(1);});
-winnerScreenPlayButton.addEventListener("click",gotToHomeScreen);
-nextButton.addEventListener("click",gotToWinnerScreen);
 
 function gotToWinnerScreen(){
     wholeUpperContainer.style.display="none";
     winnerScreen.style.display="";
     nextButton.style.display="none";
 }
+
 function gotToHomeScreen(){
     wholeUpperContainer.style.display="";
 
@@ -261,3 +229,13 @@ function gotToHomeScreen(){
     gameplay.style.display="";
     result.style.display="none";
 }
+
+showRuleButton.addEventListener("click",showRules);
+crossButton.addEventListener("click",hideRules);
+resultPlayAgainButton.addEventListener("click",resultPlayAgain);
+scissorButton.addEventListener("click",function(){playGame(2);});
+fistButton.addEventListener("click",function(){playGame(0);});
+handButton.addEventListener("click",function(){playGame(1);});
+winnerScreenPlayButton.addEventListener("click",gotToHomeScreen);
+nextButton.addEventListener("click",gotToWinnerScreen);
+
