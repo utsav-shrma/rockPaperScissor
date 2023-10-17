@@ -30,14 +30,14 @@ rule.style.display="none";
 
 result.style.display="none";
 
-function showRules(){
+let showRules=()=>{
     rule.style.display="";
 }
-function hideRules(){
+let hideRules=()=>{
     rule.style.display="none";
 }
 
-function decideRandomSign(){
+let decideRandomSign=()=>{
     let max=3;
     let min=0;
     let random=parseInt(Math.floor(Math.random() * (max - min) + min));
@@ -45,7 +45,7 @@ function decideRandomSign(){
 
 }
 
-function decideWinner(userPick,pcPick){
+let decideWinner=(userPick,pcPick)=>{
     //0->rock
     //1->paper
     //2->scissor
@@ -90,7 +90,7 @@ function decideWinner(userPick,pcPick){
     }
 }
 
-function updateScore(){
+let updateScore=()=>{
     let userScore=0;
     let pcScore=0;
 
@@ -116,7 +116,7 @@ function updateScore(){
 updateScore();
 
 
-function updatePickImg(userPick,pcPick){
+let updatePickImg=(userPick,pcPick)=>{
     let imageClassMap={
         0:{
             image:"./assets/icons8-fist-67 1.png",
@@ -142,7 +142,7 @@ function updatePickImg(userPick,pcPick){
     pcPickDiv.className=imageClassMap[pcPick].div;
 }
 
-function userWins(){
+let userWins=()=>{
     let userScore = parseInt(localStorage.getItem(userScoreKey));
     
     localStorage.setItem(userScoreKey, userScore+1);
@@ -160,7 +160,8 @@ function userWins(){
       nextButton.style.display="";
     
 }
-function pcWins(){
+
+let pcWins=()=>{
     let pcScore = parseInt(localStorage.getItem(pcScoreKey));  
     localStorage.setItem(pcScoreKey, pcScore+1);
     updateScore();
@@ -176,7 +177,8 @@ function pcWins(){
       resultMessageOponent.style.display="";
       nextButton.style.display="none";
 }
-function tie(){
+
+let tie=()=>{
     pccircleAnimation.forEach(function(element) {
         element.style.display = "none";
       });
@@ -187,7 +189,8 @@ function tie(){
       resultMessageOponent.style.display="none";
       nextButton.style.display="none";
 }
-function playGame(userPick){
+
+let playGame=(userPick)=>{
     pcPick=decideRandomSign();
     let gameResult=decideWinner(userPick,pcPick);  
     setTimeout(function() {
@@ -209,19 +212,19 @@ function playGame(userPick){
     }
 }
 
-function resultPlayAgain(){
+let resultPlayAgain=()=>{
     gameplay.style.display="";
     result.style.display="none";
     nextButton.style.display="none";
 }
 
-function gotToWinnerScreen(){
+let gotToWinnerScreen=()=>{
     wholeUpperContainer.style.display="none";
     winnerScreen.style.display="";
     nextButton.style.display="none";
 }
 
-function gotToHomeScreen(){
+let gotToHomeScreen=()=>{
     wholeUpperContainer.style.display="";
 
     winnerScreen.style.display="none";
@@ -233,9 +236,9 @@ function gotToHomeScreen(){
 showRuleButton.addEventListener("click",showRules);
 crossButton.addEventListener("click",hideRules);
 resultPlayAgainButton.addEventListener("click",resultPlayAgain);
-scissorButton.addEventListener("click",function(){playGame(2);});
-fistButton.addEventListener("click",function(){playGame(0);});
-handButton.addEventListener("click",function(){playGame(1);});
+scissorButton.addEventListener("click",()=>{playGame(2);});
+fistButton.addEventListener("click",()=>{playGame(0);});
+handButton.addEventListener("click",()=>{playGame(1);});
 winnerScreenPlayButton.addEventListener("click",gotToHomeScreen);
 nextButton.addEventListener("click",gotToWinnerScreen);
 
