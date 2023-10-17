@@ -104,8 +104,8 @@ body{
     /* background-color: black; */
     
     
-    height: 40vh;
-    width:30vw;
+    height: 400px;
+    width: 400px;
     
     
     
@@ -122,11 +122,11 @@ body{
 
 .whole-button {
     
-    height:15vh;
-    width:15vh;
+    height:100px;
+    width:100px;
     border-radius: 50%;
     background-color: white;
-    border-width: 1.5vh;
+    border-width: 10px;
     border-style: solid;
     position: relative;
     align-items: center;
@@ -135,6 +135,13 @@ body{
     
    
 }
+ #scissor-sign {
+    
+    position: relative;
+    top:50px;
+    left:40px;
+    
+  } 
 /* #scissor-sign:hover {
     
     box-shadow: 0px 0px 10px 5px #BD00FF;
@@ -144,21 +151,27 @@ body{
     filter: brightness(90%);
   }
 
-  /* #hand-sign:hover {
+  /* /* #hand-sign:hover {
     
     box-shadow: 0px 0px 10px 5px #0074B6;
     
-  }
-  #fist-sign:hover {
+  } */
+  #hand-sign {
     
-    box-shadow: 0px 0px 10px 5px #FFA944;
+    position: relative;
+    top:200px;
+    left:40px;
+    
+  }
+  #fist-sign {
+    position: relative;
+    top:50px;
+    left:45px;
+    
     
   } */
-.whole-button:active {
-    
-    box-shadow: 0 6px green;
-    transform: translateY(5px);
-  }
+
+  
 #fist-sign img{
     
     
@@ -166,16 +179,15 @@ body{
     right: 3px;
     
 }
-#hand-sign{
-   
-    
-    top: 25vh;
-    
-   
-    
-    
-}
 
+.whole-button:active {
+    
+    box-shadow: 0 6px green;
+    transform: translateY(5px);
+  }
+  #hand-sign:active{
+    box-shadow: 0 6px darkgreen;
+}
 .scissor-ring{
     border-color: #BD00FF ;
 }
@@ -503,12 +515,12 @@ body{
 /* #rules{display: none;} */
 
 .line{
-    width:15vw;
-    height: 1vw;
+    width:200px;
+    height: 10px;
     background-color: black;
-    position: absolute;
-    top:47vh;
-    left:40vw;
+    position: relative;
+    top:0px;
+    left:60px;
     z-index: -1;
     opacity: 0.3;
     
@@ -520,14 +532,14 @@ body{
 
 .line-two{
     transform: rotate(55deg);
-    top:63vh;
-    left:36vw;
+    top:60px;
+    left:40px;
 }
 
 .line-three{
     transform: rotate(-55deg);
-    top:58vh;
-    left:43vw;
+    top:60px;
+    left:130px;
 }
 
 /* #gameplay{display: none;} */
