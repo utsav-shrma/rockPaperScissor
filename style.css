@@ -443,11 +443,11 @@ body{
 
   }
   #title-list-rule{
-    width: 20vw;
-    height: 40vh;
+    width: 250px;
+    height: 300px;
     position: absolute;
-    bottom: 15vh;
-    right:2vw;
+    bottom: 90px;
+    right:25px;
     
     display: flex;
     flex-direction: column;
@@ -476,14 +476,15 @@ body{
 
   #title-list-rule ul li{
     color: yellow;
+    font-size: 13px;
 }
   #title-list-rule ul li span{
     color: white;
 }
 #cross-button{
     background-color: red;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border-color: white;
     border-style: solid;
@@ -491,9 +492,9 @@ body{
     color: white;
     padding: 0%;
     margin: 0%;
-    font-size: 40px;
+    font-size: 35px;
     position: absolute;
-    top:40vh;
+    bottom:370px;
     right: 5px;
     /* font-family: Dangrek; */
     
